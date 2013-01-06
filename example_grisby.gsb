@@ -1,0 +1,561 @@
+<?xml version="1.0"?>
+<Grisbi>
+	<General
+		File_version="0.6.0"
+		Grisbi_version="0.8.8"
+		Crypt_file="0"
+		Archive_file="0"
+		File_title="BeispielKonten"
+		General_address="(null)"
+		Second_general_address="(null)"
+		Date_format="%d/%m/%Y"
+		Decimal_point=","
+		Thousands_separator="."
+		Party_list_currency_number="1"
+		Category_list_currency_number="1"
+		Budget_list_currency_number="1"
+		Scheduler_view="0"
+		Scheduler_custom_number="0"
+		Scheduler_custom_menu="0"
+		Import_interval_search="2"
+		Import_extract_number_for_check="0"
+		Import_fusion_transactions="0"
+		Import_categorie_for_payee="0"
+		Import_fyear_by_value_date="0"
+		Reconcile_end_date="0"
+		Use_logo="1"
+		Name_logo="(null)"
+		Is_pixmaps_dir="1"
+		Remind_display_per_account="1"
+		Transactions_view="18-1-3-13-5-6-7-0-0-12-0-9-8-0-0-0-15-0-0-0-0-0-0-0-0-0-0-0"
+		One_line_showed="0"
+		Two_lines_showed="0"
+		Three_lines_showed="0"
+		Remind_form_per_account="0"
+		Transaction_column_width="10-12-36-6-12-12-13"
+		Transaction_column_align="1-1-0-1-2-2-2"
+		Scheduler_column_width="10-12-36-12-12-12-19"
+		Combofix_mixed_sort="0"
+		Combofix_max_item="0"
+		Combofix_case_sensitive="0"
+		Combofix_force_payee="0"
+		Combofix_force_category="0"
+		Automatic_amount_separator="0"
+		CSV_separator=";"
+		CSV_skipped_lines="0-0-0-0-0-0-0-0-0-0"
+		Metatree_sort_transactions="0"
+		Add_archive_in_total_balance="1"
+		Bet_array_column_width="15-40-15-15-15"
+		Bet_capital="1000.00"
+		Bet_currency="1"
+		Bet_taux_annuel="4.00"
+		Bet_index_duree="0"
+		Bet_frais="0.00"
+		Bet_type_taux="1" />
+	<Color
+		Background_color_0_red="55000"
+		Background_color_0_green="55000"
+		Background_color_0_blue="65535"
+		Background_color_1_red="65535"
+		Background_color_1_green="65535"
+		Background_color_1_blue="65535"
+		Couleur_jour_red="55512"
+		Couleur_jour_green="55512"
+		Couleur_jour_blue="55512"
+		Background_scheduled_red="50000"
+		Background_scheduled_green="50000"
+		Background_scheduled_blue="50000"
+		Background_archive_red="15000"
+		Background_archive_green="30000"
+		Background_archive_blue="10000"
+		Selection_red="63000"
+		Selection_green="40000"
+		Selection_blue="40000"
+		Background_split_red="61423"
+		Background_split_green="50629"
+		Background_split_blue="50629"
+		Text_color_0_red="0"
+		Text_color_0_green="0"
+		Text_color_0_blue="0"
+		Text_color_1_red="65535"
+		Text_color_1_green="0"
+		Text_color_1_blue="0"
+		Calendar_entry_red="65535"
+		Calendar_entry_green="0"
+		Calendar_entry_blue="0"
+		Couleur_bet_division_red="64550"
+		Couleur_bet_division_green="65535"
+		Couleur_bet_division_blue="33466"
+		Couleur_bet_future_red="31829"
+		Couleur_bet_future_green="51015"
+		Couleur_bet_future_blue="35908"
+		Couleur_bet_solde_red="2318"
+		Couleur_bet_solde_green="65535"
+		Couleur_bet_solde_blue="60331"
+		Couleur_bet_transfert_red="31829"
+		Couleur_bet_transfert_green="51015"
+		Couleur_bet_transfert_blue="35908" />
+	<Print
+		Draw_lines="1"
+		Draw_column="1"
+		Draw_background="0"
+		Draw_archives="0"
+		Draw_columns_name="1"
+		Draw_title="0"
+		Draw_interval_dates="0"
+		Draw_dates_are_value_dates="0"
+		Font_transactions="sans 6"
+		Font_title="sans 12"
+		Report_font_transactions="sans 6"
+		Report_font_title="sans 12" />
+	<Currency Nb="1" Na="Euro" Co="€" Ico="EUR" Fl="2" />
+	<Account
+		Name="Dagobert Bank Konto"
+		Id="(null)"
+		Number="1"
+		Owner="(null)"
+		Kind="0"
+		Currency="1"
+		Path_icon="(null)"
+		Bank="1"
+		Bank_branch_code="(null)"
+		Bank_account_number="(null)"
+		Key="(null)"
+		Bank_account_IBAN="(null)"
+		Initial_balance="13513.00"
+		Minimum_wanted_balance="0.00"
+		Minimum_authorised_balance="0.00"
+		Closed_account="0"
+		Show_marked="0"
+		Show_archives_lines="0"
+		Lines_per_transaction="1"
+		Comment="(null)"
+		Owner_address="(null)"
+		Default_debit_method="3"
+		Default_credit_method="2"
+		Sort_by_method="0"
+		Neutrals_inside_method="0"
+		Sort_order="1/2/3/4/5"
+		Ascending_sort="0"
+		Column_sort="1"
+		Sorting_kind_column="18-1-3-13-5-6-0"
+		Form_columns_number="4"
+		Form_lines_number="3"
+		Form_organization="1-6-2-3-0-0-0-7-11-12-0-0-0-10-17-0-0-0-0-0-0-0-0-0"
+		Form_columns_width="15-50-15-15-0-0"
+		Bet_use_budget="0" />
+	<Account
+		Name="Bargeld immer dabei"
+		Id="(null)"
+		Number="2"
+		Owner="(null)"
+		Kind="1"
+		Currency="1"
+		Path_icon="(null)"
+		Bank="1"
+		Bank_branch_code="(null)"
+		Bank_account_number="(null)"
+		Key="(null)"
+		Bank_account_IBAN="(null)"
+		Initial_balance="549.00"
+		Minimum_wanted_balance="0.00"
+		Minimum_authorised_balance="0.00"
+		Closed_account="0"
+		Show_marked="0"
+		Show_archives_lines="0"
+		Lines_per_transaction="3"
+		Comment="(null)"
+		Owner_address="(null)"
+		Default_debit_method="0"
+		Default_credit_method="0"
+		Sort_by_method="0"
+		Neutrals_inside_method="0"
+		Sort_order="(null)"
+		Ascending_sort="0"
+		Column_sort="1"
+		Sorting_kind_column="18-1-3-13-5-6-0"
+		Form_columns_number="4"
+		Form_lines_number="3"
+		Form_organization="1-6-2-3-0-0-0-7-11-12-0-0-0-10-17-0-0-0-0-0-0-0-0-0"
+		Form_columns_width="15-50-15-15-0-0"
+		Bet_use_budget="0" />
+	<Account
+		Name="Kreditkonto Würg"
+		Id="(null)"
+		Number="3"
+		Owner="(null)"
+		Kind="2"
+		Currency="1"
+		Path_icon="(null)"
+		Bank="1"
+		Bank_branch_code="(null)"
+		Bank_account_number="(null)"
+		Key="(null)"
+		Bank_account_IBAN="(null)"
+		Initial_balance="-254815.00"
+		Minimum_wanted_balance="0.00"
+		Minimum_authorised_balance="0.00"
+		Closed_account="0"
+		Show_marked="0"
+		Show_archives_lines="0"
+		Lines_per_transaction="3"
+		Comment="(null)"
+		Owner_address="(null)"
+		Default_debit_method="6"
+		Default_credit_method="6"
+		Sort_by_method="0"
+		Neutrals_inside_method="0"
+		Sort_order="6"
+		Ascending_sort="0"
+		Column_sort="1"
+		Sorting_kind_column="18-1-3-13-5-6-0"
+		Form_columns_number="4"
+		Form_lines_number="3"
+		Form_organization="1-6-2-3-0-0-0-7-11-12-0-0-0-10-17-0-0-0-0-0-0-0-0-0"
+		Form_columns_width="15-50-15-15-0-0"
+		Bet_use_budget="0" />
+	<Account
+		Name="Anlagekonto für Später"
+		Id="(null)"
+		Number="4"
+		Owner="(null)"
+		Kind="3"
+		Currency="1"
+		Path_icon="(null)"
+		Bank="1"
+		Bank_branch_code="(null)"
+		Bank_account_number="(null)"
+		Key="(null)"
+		Bank_account_IBAN="(null)"
+		Initial_balance="0.60"
+		Minimum_wanted_balance="0.00"
+		Minimum_authorised_balance="0.00"
+		Closed_account="0"
+		Show_marked="0"
+		Show_archives_lines="0"
+		Lines_per_transaction="3"
+		Comment="(null)"
+		Owner_address="(null)"
+		Default_debit_method="0"
+		Default_credit_method="0"
+		Sort_by_method="0"
+		Neutrals_inside_method="0"
+		Sort_order="(null)"
+		Ascending_sort="0"
+		Column_sort="1"
+		Sorting_kind_column="18-1-3-13-5-6-0"
+		Form_columns_number="4"
+		Form_lines_number="3"
+		Form_organization="1-6-2-3-0-0-0-7-11-12-0-0-0-10-17-0-0-0-0-0-0-0-0-0"
+		Form_columns_width="15-50-15-15-0-0"
+		Bet_use_budget="-1" />
+	<Account
+		Name="Zock Bank Konto"
+		Id="(null)"
+		Number="5"
+		Owner="(null)"
+		Kind="0"
+		Currency="1"
+		Path_icon="(null)"
+		Bank="2"
+		Bank_branch_code="(null)"
+		Bank_account_number="(null)"
+		Key="(null)"
+		Bank_account_IBAN="(null)"
+		Initial_balance="25021.00"
+		Minimum_wanted_balance="0.00"
+		Minimum_authorised_balance="0.00"
+		Closed_account="0"
+		Show_marked="0"
+		Show_archives_lines="0"
+		Lines_per_transaction="3"
+		Comment="(null)"
+		Owner_address="(null)"
+		Default_debit_method="9"
+		Default_credit_method="8"
+		Sort_by_method="0"
+		Neutrals_inside_method="0"
+		Sort_order="7/8/9/10/11"
+		Ascending_sort="0"
+		Column_sort="1"
+		Sorting_kind_column="18-1-3-13-5-6-0"
+		Form_columns_number="4"
+		Form_lines_number="3"
+		Form_organization="1-6-2-3-0-0-0-7-11-12-0-0-0-10-17-0-0-0-0-0-0-0-0-0"
+		Form_columns_width="15-50-15-15-0-0"
+		Bet_use_budget="0" />
+	<Account
+		Name="Donald Konto"
+		Id="(null)"
+		Number="6"
+		Owner="(null)"
+		Kind="0"
+		Currency="1"
+		Path_icon="(null)"
+		Bank="1"
+		Bank_branch_code="(null)"
+		Bank_account_number="(null)"
+		Key="(null)"
+		Bank_account_IBAN="(null)"
+		Initial_balance="1111.00"
+		Minimum_wanted_balance="0.00"
+		Minimum_authorised_balance="0.00"
+		Closed_account="0"
+		Show_marked="0"
+		Show_archives_lines="0"
+		Lines_per_transaction="3"
+		Comment="(null)"
+		Owner_address="(null)"
+		Default_debit_method="14"
+		Default_credit_method="13"
+		Sort_by_method="0"
+		Neutrals_inside_method="0"
+		Sort_order="12/13/14/15/16"
+		Ascending_sort="0"
+		Column_sort="1"
+		Sorting_kind_column="18-1-3-13-5-6-0"
+		Form_columns_number="4"
+		Form_lines_number="3"
+		Form_organization="1-6-2-3-0-0-0-7-11-12-0-0-0-10-17-0-0-0-0-0-0-0-0-0"
+		Form_columns_width="15-50-15-15-0-0"
+		Bet_use_budget="0" />
+	<Account
+		Name="Daisy Konto"
+		Id="(null)"
+		Number="7"
+		Owner="(null)"
+		Kind="0"
+		Currency="1"
+		Path_icon="(null)"
+		Bank="1"
+		Bank_branch_code="(null)"
+		Bank_account_number="(null)"
+		Key="(null)"
+		Bank_account_IBAN="(null)"
+		Initial_balance="2222.00"
+		Minimum_wanted_balance="0.00"
+		Minimum_authorised_balance="0.00"
+		Closed_account="0"
+		Show_marked="0"
+		Show_archives_lines="0"
+		Lines_per_transaction="3"
+		Comment="(null)"
+		Owner_address="(null)"
+		Default_debit_method="19"
+		Default_credit_method="18"
+		Sort_by_method="0"
+		Neutrals_inside_method="0"
+		Sort_order="17/18/19/20/21"
+		Ascending_sort="0"
+		Column_sort="1"
+		Sorting_kind_column="18-1-3-13-5-6-0"
+		Form_columns_number="4"
+		Form_lines_number="3"
+		Form_organization="1-6-2-3-0-0-0-7-11-12-0-0-0-10-17-0-0-0-0-0-0-0-0-0"
+		Form_columns_width="15-50-15-15-0-0"
+		Bet_use_budget="0" />
+	<Payment Number="1" Name="Umbuchung" Sign="0" Show_entry="1" Automatic_number="0" Current_number="(null)" Account="1" />
+	<Payment Number="2" Name="Einzahlung" Sign="2" Show_entry="0" Automatic_number="0" Current_number="(null)" Account="1" />
+	<Payment Number="3" Name="Kreditkarte" Sign="1" Show_entry="0" Automatic_number="0" Current_number="(null)" Account="1" />
+	<Payment Number="4" Name="Barzahlung" Sign="1" Show_entry="0" Automatic_number="0" Current_number="(null)" Account="1" />
+	<Payment Number="5" Name="Scheck" Sign="1" Show_entry="1" Automatic_number="1" Current_number="(null)" Account="1" />
+	<Payment Number="6" Name="Umbuchung" Sign="0" Show_entry="1" Automatic_number="0" Current_number="(null)" Account="3" />
+	<Payment Number="7" Name="Umbuchung" Sign="0" Show_entry="1" Automatic_number="0" Current_number="(null)" Account="5" />
+	<Payment Number="8" Name="Einzahlung" Sign="2" Show_entry="0" Automatic_number="0" Current_number="(null)" Account="5" />
+	<Payment Number="9" Name="Kreditkarte" Sign="1" Show_entry="0" Automatic_number="0" Current_number="(null)" Account="5" />
+	<Payment Number="10" Name="Barzahlung" Sign="1" Show_entry="0" Automatic_number="0" Current_number="(null)" Account="5" />
+	<Payment Number="11" Name="Scheck" Sign="1" Show_entry="1" Automatic_number="1" Current_number="(null)" Account="5" />
+	<Payment Number="12" Name="Umbuchung" Sign="0" Show_entry="1" Automatic_number="0" Current_number="(null)" Account="6" />
+	<Payment Number="13" Name="Einzahlung" Sign="2" Show_entry="0" Automatic_number="0" Current_number="(null)" Account="6" />
+	<Payment Number="14" Name="Kreditkarte" Sign="1" Show_entry="0" Automatic_number="0" Current_number="(null)" Account="6" />
+	<Payment Number="15" Name="Barzahlung" Sign="1" Show_entry="0" Automatic_number="0" Current_number="(null)" Account="6" />
+	<Payment Number="16" Name="Scheck" Sign="1" Show_entry="1" Automatic_number="1" Current_number="(null)" Account="6" />
+	<Payment Number="17" Name="Umbuchung" Sign="0" Show_entry="1" Automatic_number="0" Current_number="(null)" Account="7" />
+	<Payment Number="18" Name="Einzahlung" Sign="2" Show_entry="0" Automatic_number="0" Current_number="(null)" Account="7" />
+	<Payment Number="19" Name="Kreditkarte" Sign="1" Show_entry="0" Automatic_number="0" Current_number="(null)" Account="7" />
+	<Payment Number="20" Name="Barzahlung" Sign="1" Show_entry="0" Automatic_number="0" Current_number="(null)" Account="7" />
+	<Payment Number="21" Name="Scheck" Sign="1" Show_entry="1" Automatic_number="1" Current_number="(null)" Account="7" />
+	<Transaction Ac="1" Nb="1" Id="(null)" Dt="01/30/2012" Dv="(null)" Cu="1" Am="250.00" Exb="0" Exr="0.00" Exf="0.00" Pa="1" Ca="5" Sca="1" Br="0" No="(null)" Pn="2" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="2" Id="(null)" Dt="02/06/2012" Dv="(null)" Cu="1" Am="250.00" Exb="0" Exr="0.00" Exf="0.00" Pa="1" Ca="5" Sca="1" Br="0" No="(null)" Pn="2" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="3" Id="(null)" Dt="02/13/2012" Dv="(null)" Cu="1" Am="250.00" Exb="0" Exr="0.00" Exf="0.00" Pa="1" Ca="5" Sca="1" Br="0" No="(null)" Pn="2" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="4" Id="(null)" Dt="02/20/2012" Dv="(null)" Cu="1" Am="250.00" Exb="0" Exr="0.00" Exf="0.00" Pa="1" Ca="5" Sca="1" Br="0" No="(null)" Pn="2" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="5" Id="(null)" Dt="02/27/2012" Dv="(null)" Cu="1" Am="250.00" Exb="0" Exr="0.00" Exf="0.00" Pa="1" Ca="5" Sca="1" Br="0" No="(null)" Pn="2" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="6" Id="(null)" Dt="03/05/2012" Dv="(null)" Cu="1" Am="250.00" Exb="0" Exr="0.00" Exf="0.00" Pa="1" Ca="5" Sca="1" Br="0" No="(null)" Pn="2" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="7" Id="(null)" Dt="03/12/2012" Dv="(null)" Cu="1" Am="250.00" Exb="0" Exr="0.00" Exf="0.00" Pa="1" Ca="5" Sca="1" Br="0" No="(null)" Pn="2" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="8" Id="(null)" Dt="03/19/2012" Dv="(null)" Cu="1" Am="250.00" Exb="0" Exr="0.00" Exf="0.00" Pa="1" Ca="5" Sca="1" Br="0" No="(null)" Pn="2" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="9" Id="(null)" Dt="03/26/2012" Dv="(null)" Cu="1" Am="250.00" Exb="0" Exr="0.00" Exf="0.00" Pa="1" Ca="5" Sca="1" Br="0" No="(null)" Pn="2" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="10" Id="(null)" Dt="04/02/2012" Dv="(null)" Cu="1" Am="250.00" Exb="0" Exr="0.00" Exf="0.00" Pa="1" Ca="5" Sca="1" Br="0" No="(null)" Pn="2" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="11" Id="(null)" Dt="04/09/2012" Dv="(null)" Cu="1" Am="250.00" Exb="0" Exr="0.00" Exf="0.00" Pa="1" Ca="5" Sca="1" Br="0" No="(null)" Pn="2" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="12" Id="(null)" Dt="04/16/2012" Dv="(null)" Cu="1" Am="250.00" Exb="0" Exr="0.00" Exf="0.00" Pa="1" Ca="5" Sca="1" Br="0" No="(null)" Pn="2" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="13" Id="(null)" Dt="04/23/2012" Dv="(null)" Cu="1" Am="250.00" Exb="0" Exr="0.00" Exf="0.00" Pa="1" Ca="5" Sca="1" Br="0" No="(null)" Pn="2" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="14" Id="(null)" Dt="04/30/2012" Dv="(null)" Cu="1" Am="250.00" Exb="0" Exr="0.00" Exf="0.00" Pa="1" Ca="5" Sca="1" Br="0" No="(null)" Pn="2" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="15" Id="(null)" Dt="05/07/2012" Dv="(null)" Cu="1" Am="250.00" Exb="0" Exr="0.00" Exf="0.00" Pa="1" Ca="5" Sca="1" Br="0" No="(null)" Pn="2" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="16" Id="(null)" Dt="05/14/2012" Dv="(null)" Cu="1" Am="250.00" Exb="0" Exr="0.00" Exf="0.00" Pa="1" Ca="5" Sca="1" Br="0" No="(null)" Pn="2" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="17" Id="(null)" Dt="05/21/2012" Dv="(null)" Cu="1" Am="250.00" Exb="0" Exr="0.00" Exf="0.00" Pa="1" Ca="5" Sca="1" Br="0" No="(null)" Pn="2" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="18" Id="(null)" Dt="05/28/2012" Dv="(null)" Cu="1" Am="250.00" Exb="0" Exr="0.00" Exf="0.00" Pa="1" Ca="5" Sca="1" Br="0" No="(null)" Pn="2" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="19" Id="(null)" Dt="06/04/2012" Dv="(null)" Cu="1" Am="250.00" Exb="0" Exr="0.00" Exf="0.00" Pa="1" Ca="5" Sca="1" Br="0" No="(null)" Pn="2" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="20" Id="(null)" Dt="06/11/2012" Dv="(null)" Cu="1" Am="250.00" Exb="0" Exr="0.00" Exf="0.00" Pa="1" Ca="5" Sca="1" Br="0" No="(null)" Pn="2" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="21" Id="(null)" Dt="06/18/2012" Dv="(null)" Cu="1" Am="250.00" Exb="0" Exr="0.00" Exf="0.00" Pa="1" Ca="5" Sca="1" Br="0" No="(null)" Pn="2" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="22" Id="(null)" Dt="06/25/2012" Dv="(null)" Cu="1" Am="250.00" Exb="0" Exr="0.00" Exf="0.00" Pa="1" Ca="5" Sca="1" Br="0" No="(null)" Pn="2" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="23" Id="(null)" Dt="07/02/2012" Dv="(null)" Cu="1" Am="250.00" Exb="0" Exr="0.00" Exf="0.00" Pa="1" Ca="5" Sca="1" Br="0" No="(null)" Pn="2" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="24" Id="(null)" Dt="07/09/2012" Dv="(null)" Cu="1" Am="250.00" Exb="0" Exr="0.00" Exf="0.00" Pa="1" Ca="5" Sca="1" Br="0" No="(null)" Pn="2" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="25" Id="(null)" Dt="07/16/2012" Dv="(null)" Cu="1" Am="250.00" Exb="0" Exr="0.00" Exf="0.00" Pa="1" Ca="5" Sca="1" Br="0" No="(null)" Pn="2" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="26" Id="(null)" Dt="07/23/2012" Dv="(null)" Cu="1" Am="250.00" Exb="0" Exr="0.00" Exf="0.00" Pa="1" Ca="5" Sca="1" Br="0" No="(null)" Pn="2" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="27" Id="(null)" Dt="07/30/2012" Dv="(null)" Cu="1" Am="250.00" Exb="0" Exr="0.00" Exf="0.00" Pa="1" Ca="5" Sca="1" Br="0" No="(null)" Pn="2" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="28" Id="(null)" Dt="08/06/2012" Dv="(null)" Cu="1" Am="250.00" Exb="0" Exr="0.00" Exf="0.00" Pa="1" Ca="5" Sca="1" Br="0" No="(null)" Pn="2" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="29" Id="(null)" Dt="08/13/2012" Dv="(null)" Cu="1" Am="250.00" Exb="0" Exr="0.00" Exf="0.00" Pa="1" Ca="5" Sca="1" Br="0" No="(null)" Pn="2" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="30" Id="(null)" Dt="08/20/2012" Dv="(null)" Cu="1" Am="250.00" Exb="0" Exr="0.00" Exf="0.00" Pa="1" Ca="5" Sca="1" Br="0" No="(null)" Pn="2" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="31" Id="(null)" Dt="08/27/2012" Dv="(null)" Cu="1" Am="250.00" Exb="0" Exr="0.00" Exf="0.00" Pa="1" Ca="5" Sca="1" Br="0" No="(null)" Pn="2" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="32" Id="(null)" Dt="09/03/2012" Dv="(null)" Cu="1" Am="250.00" Exb="0" Exr="0.00" Exf="0.00" Pa="1" Ca="5" Sca="1" Br="0" No="(null)" Pn="2" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="33" Id="(null)" Dt="09/10/2012" Dv="(null)" Cu="1" Am="250.00" Exb="0" Exr="0.00" Exf="0.00" Pa="1" Ca="5" Sca="1" Br="0" No="(null)" Pn="2" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="34" Id="(null)" Dt="09/17/2012" Dv="(null)" Cu="1" Am="250.00" Exb="0" Exr="0.00" Exf="0.00" Pa="1" Ca="5" Sca="1" Br="0" No="(null)" Pn="2" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="35" Id="(null)" Dt="09/24/2012" Dv="(null)" Cu="1" Am="250.00" Exb="0" Exr="0.00" Exf="0.00" Pa="1" Ca="5" Sca="1" Br="0" No="(null)" Pn="2" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="36" Id="(null)" Dt="10/01/2012" Dv="(null)" Cu="1" Am="250.00" Exb="0" Exr="0.00" Exf="0.00" Pa="1" Ca="5" Sca="1" Br="0" No="(null)" Pn="2" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="37" Id="(null)" Dt="10/08/2012" Dv="(null)" Cu="1" Am="250.00" Exb="0" Exr="0.00" Exf="0.00" Pa="1" Ca="5" Sca="1" Br="0" No="(null)" Pn="2" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="38" Id="(null)" Dt="10/15/2012" Dv="(null)" Cu="1" Am="250.00" Exb="0" Exr="0.00" Exf="0.00" Pa="1" Ca="5" Sca="1" Br="0" No="(null)" Pn="2" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="39" Id="(null)" Dt="10/22/2012" Dv="(null)" Cu="1" Am="250.00" Exb="0" Exr="0.00" Exf="0.00" Pa="1" Ca="5" Sca="1" Br="0" No="(null)" Pn="2" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="40" Id="(null)" Dt="10/29/2012" Dv="(null)" Cu="1" Am="250.00" Exb="0" Exr="0.00" Exf="0.00" Pa="1" Ca="5" Sca="1" Br="0" No="(null)" Pn="2" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="41" Id="(null)" Dt="11/05/2012" Dv="(null)" Cu="1" Am="250.00" Exb="0" Exr="0.00" Exf="0.00" Pa="1" Ca="5" Sca="1" Br="0" No="(null)" Pn="2" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="42" Id="(null)" Dt="11/12/2012" Dv="(null)" Cu="1" Am="250.00" Exb="0" Exr="0.00" Exf="0.00" Pa="1" Ca="5" Sca="1" Br="0" No="(null)" Pn="2" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="43" Id="(null)" Dt="11/19/2012" Dv="(null)" Cu="1" Am="250.00" Exb="0" Exr="0.00" Exf="0.00" Pa="1" Ca="5" Sca="1" Br="0" No="(null)" Pn="2" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="44" Id="(null)" Dt="11/26/2012" Dv="(null)" Cu="1" Am="250.00" Exb="0" Exr="0.00" Exf="0.00" Pa="1" Ca="5" Sca="1" Br="0" No="(null)" Pn="2" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="45" Id="(null)" Dt="12/03/2012" Dv="(null)" Cu="1" Am="250.00" Exb="0" Exr="0.00" Exf="0.00" Pa="1" Ca="5" Sca="1" Br="0" No="(null)" Pn="2" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="46" Id="(null)" Dt="12/10/2012" Dv="(null)" Cu="1" Am="250.00" Exb="0" Exr="0.00" Exf="0.00" Pa="1" Ca="5" Sca="1" Br="0" No="(null)" Pn="2" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="47" Id="(null)" Dt="12/17/2012" Dv="(null)" Cu="1" Am="250.00" Exb="0" Exr="0.00" Exf="0.00" Pa="1" Ca="5" Sca="1" Br="0" No="(null)" Pn="2" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="48" Id="(null)" Dt="12/24/2012" Dv="(null)" Cu="1" Am="250.00" Exb="0" Exr="0.00" Exf="0.00" Pa="1" Ca="5" Sca="1" Br="0" No="(null)" Pn="2" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="49" Id="(null)" Dt="01/30/2012" Dv="(null)" Cu="1" Am="-125.00" Exb="0" Exr="0.00" Exf="0.00" Pa="2" Ca="12" Sca="5" Br="0" No="(null)" Pn="3" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="50" Id="(null)" Dt="02/29/2012" Dv="(null)" Cu="1" Am="-125.00" Exb="0" Exr="0.00" Exf="0.00" Pa="2" Ca="12" Sca="5" Br="0" No="(null)" Pn="3" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="51" Id="(null)" Dt="03/29/2012" Dv="(null)" Cu="1" Am="-125.00" Exb="0" Exr="0.00" Exf="0.00" Pa="2" Ca="12" Sca="5" Br="0" No="(null)" Pn="3" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="52" Id="(null)" Dt="04/29/2012" Dv="(null)" Cu="1" Am="-125.00" Exb="0" Exr="0.00" Exf="0.00" Pa="2" Ca="12" Sca="5" Br="0" No="(null)" Pn="3" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="53" Id="(null)" Dt="05/29/2012" Dv="(null)" Cu="1" Am="-125.00" Exb="0" Exr="0.00" Exf="0.00" Pa="2" Ca="12" Sca="5" Br="0" No="(null)" Pn="3" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="54" Id="(null)" Dt="06/29/2012" Dv="(null)" Cu="1" Am="-125.00" Exb="0" Exr="0.00" Exf="0.00" Pa="2" Ca="12" Sca="5" Br="0" No="(null)" Pn="3" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="55" Id="(null)" Dt="07/29/2012" Dv="(null)" Cu="1" Am="-125.00" Exb="0" Exr="0.00" Exf="0.00" Pa="2" Ca="12" Sca="5" Br="0" No="(null)" Pn="3" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="56" Id="(null)" Dt="08/29/2012" Dv="(null)" Cu="1" Am="-125.00" Exb="0" Exr="0.00" Exf="0.00" Pa="2" Ca="12" Sca="5" Br="0" No="(null)" Pn="3" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="57" Id="(null)" Dt="09/29/2012" Dv="(null)" Cu="1" Am="-125.00" Exb="0" Exr="0.00" Exf="0.00" Pa="2" Ca="12" Sca="5" Br="0" No="(null)" Pn="3" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="58" Id="(null)" Dt="10/29/2012" Dv="(null)" Cu="1" Am="-125.00" Exb="0" Exr="0.00" Exf="0.00" Pa="2" Ca="12" Sca="5" Br="0" No="(null)" Pn="3" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="59" Id="(null)" Dt="11/29/2012" Dv="(null)" Cu="1" Am="-125.00" Exb="0" Exr="0.00" Exf="0.00" Pa="2" Ca="12" Sca="5" Br="0" No="(null)" Pn="3" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="60" Id="(null)" Dt="12/29/2012" Dv="(null)" Cu="1" Am="-125.00" Exb="0" Exr="0.00" Exf="0.00" Pa="2" Ca="12" Sca="5" Br="0" No="(null)" Pn="3" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Transaction Ac="1" Nb="61" Id="(null)" Dt="12/31/2012" Dv="(null)" Cu="1" Am="250.00" Exb="0" Exr="0.00" Exf="0.00" Pa="1" Ca="5" Sca="1" Br="0" No="(null)" Pn="2" Pc="(null)" Ma="0" Ar="0" Au="1" Re="0" Fi="0" Bu="0" Sbu="0" Vo="(null)" Ba="(null)" Trt="0" Mo="0" />
+	<Scheduled Nb="1" Dt="01/07/2013" Ac="1" Am="250.00" Cu="1" Pa="1" Ca="5" Sca="1" Tra="0" Pn="2" CPn="0" Pc="(null)" Fi="0" Bu="0" Sbu="0" No="(null)" Au="1" Pe="1" Pei="0" Pep="0" Dtl="(null)" Br="0" Mo="0" />
+	<Scheduled Nb="2" Dt="01/29/2013" Ac="1" Am="-125.00" Cu="1" Pa="2" Ca="12" Sca="5" Tra="0" Pn="3" CPn="0" Pc="(null)" Fi="0" Bu="0" Sbu="0" No="(null)" Au="1" Pe="2" Pei="0" Pep="0" Dtl="(null)" Br="0" Mo="0" />
+	<Party Nb="1" Na="Einnahmen" Txt="(null)" Search="(null)" />
+	<Party Nb="2" Na="Ausgaben" Txt="(null)" Search="(null)" />
+	<Category Nb="1" Na="Bankgebühren" Kd="1" />
+	<Sub_category Nbc="1" Nb="1" Na="Depotgebühren" />
+	<Sub_category Nbc="1" Nb="2" Na="Dispozinsen" />
+	<Sub_category Nbc="1" Nb="3" Na="Kontoführung" />
+	<Category Nb="2" Na="Bekleidung" Kd="1" />
+	<Sub_category Nbc="2" Nb="1" Na="Kleidung" />
+	<Sub_category Nbc="2" Nb="2" Na="Schuhe" />
+	<Category Nb="3" Na="Eigenheim" Kd="1" />
+	<Sub_category Nbc="3" Nb="1" Na="Eigenheimversicherung" />
+	<Sub_category Nbc="3" Nb="2" Na="Einrichtung" />
+	<Sub_category Nbc="3" Nb="3" Na="Garten" />
+	<Sub_category Nbc="3" Nb="4" Na="Gemeindeabgaben" />
+	<Sub_category Nbc="3" Nb="5" Na="Grundsteuer" />
+	<Sub_category Nbc="3" Nb="6" Na="Heizkosten" />
+	<Sub_category Nbc="3" Nb="7" Na="Müllabfuhr" />
+	<Sub_category Nbc="3" Nb="8" Na="Rundfunkgebühr" />
+	<Sub_category Nbc="3" Nb="9" Na="Strom" />
+	<Sub_category Nbc="3" Nb="10" Na="Telefon" />
+	<Sub_category Nbc="3" Nb="11" Na="Wasser" />
+	<Category Nb="4" Na="Einkünfte" Kd="0" />
+	<Sub_category Nbc="4" Nb="1" Na="Familienbeihilfe" />
+	<Sub_category Nbc="4" Nb="2" Na="Kindergeld" />
+	<Sub_category Nbc="4" Nb="3" Na="Steuerausgleich" />
+	<Category Nb="5" Na="Erträge" Kd="0" />
+	<Sub_category Nbc="5" Nb="1" Na="Dividenden" />
+	<Sub_category Nbc="5" Nb="2" Na="Kapitalertrag" />
+	<Category Nb="6" Na="Freizeit" Kd="1" />
+	<Sub_category Nbc="6" Nb="1" Na="Bücher" />
+	<Sub_category Nbc="6" Nb="2" Na="Filme" />
+	<Sub_category Nbc="6" Nb="3" Na="Internet" />
+	<Sub_category Nbc="6" Nb="4" Na="Kino" />
+	<Sub_category Nbc="6" Nb="5" Na="Konzerte" />
+	<Sub_category Nbc="6" Nb="6" Na="Mobiltelefon" />
+	<Sub_category Nbc="6" Nb="7" Na="Multimedia" />
+	<Sub_category Nbc="6" Nb="8" Na="Museen" />
+	<Sub_category Nbc="6" Nb="9" Na="Sport" />
+	<Sub_category Nbc="6" Nb="10" Na="Sportartikel" />
+	<Sub_category Nbc="6" Nb="11" Na="Zeitschriften" />
+	<Category Nb="7" Na="Gesundheit" Kd="1" />
+	<Sub_category Nbc="7" Nb="1" Na="Apotheke" />
+	<Sub_category Nbc="7" Nb="2" Na="Facharzt" />
+	<Sub_category Nbc="7" Nb="3" Na="Krankenhaus" />
+	<Sub_category Nbc="7" Nb="4" Na="Krankenversicherung" />
+	<Sub_category Nbc="7" Nb="5" Na="Pflege" />
+	<Sub_category Nbc="7" Nb="6" Na="Praktischer Arzt" />
+	<Category Nb="8" Na="Haushalt" Kd="1" />
+	<Sub_category Nbc="8" Nb="1" Na="Gartengeräte" />
+	<Sub_category Nbc="8" Nb="2" Na="Haushaltsgeräte" />
+	<Sub_category Nbc="8" Nb="3" Na="Werkzeug" />
+	<Category Nb="9" Na="Haustiere" Kd="1" />
+	<Sub_category Nbc="9" Nb="1" Na="Futter" />
+	<Sub_category Nbc="9" Nb="2" Na="Tierarzt" />
+	<Category Nb="10" Na="Kfzkosten" Kd="1" />
+	<Sub_category Nbc="10" Nb="1" Na="Autokauf" />
+	<Sub_category Nbc="10" Nb="2" Na="Autoversicherung" />
+	<Sub_category Nbc="10" Nb="3" Na="Kraftstoff" />
+	<Sub_category Nbc="10" Nb="4" Na="Leasingraten" />
+	<Sub_category Nbc="10" Nb="5" Na="Mautgebühren" />
+	<Sub_category Nbc="10" Nb="6" Na="Parkgebühren" />
+	<Sub_category Nbc="10" Nb="7" Na="Reparaturen" />
+	<Category Nb="11" Na="Kinder" Kd="1" />
+	<Sub_category Nbc="11" Nb="1" Na="Betreuung" />
+	<Sub_category Nbc="11" Nb="2" Na="Internat" />
+	<Sub_category Nbc="11" Nb="3" Na="Kindergarten" />
+	<Sub_category Nbc="11" Nb="4" Na="Schulgeld" />
+	<Sub_category Nbc="11" Nb="5" Na="Spielzeug" />
+	<Sub_category Nbc="11" Nb="6" Na="Taschengeld" />
+	<Category Nb="12" Na="Kredit" Kd="1" />
+	<Sub_category Nbc="12" Nb="1" Na="Bearbeitungsgebühr" />
+	<Sub_category Nbc="12" Nb="2" Na="Kreditrate" />
+	<Sub_category Nbc="12" Nb="3" Na="Kreditspesen" />
+	<Sub_category Nbc="12" Nb="4" Na="Kreditversicherung" />
+	<Sub_category Nbc="12" Nb="5" Na="Kreditzinsen" />
+	<Category Nb="13" Na="Lebensmittel" Kd="1" />
+	<Sub_category Nbc="13" Nb="1" Na="Nahrungsmittel" />
+	<Sub_category Nbc="13" Nb="2" Na="Restaurant" />
+	<Sub_category Nbc="13" Nb="3" Na="Supermarkt" />
+	<Category Nb="14" Na="Lohn" Kd="0" />
+	<Sub_category Nbc="14" Nb="1" Na="Nettogehalt" />
+	<Sub_category Nbc="14" Nb="2" Na="Prämien" />
+	<Sub_category Nbc="14" Nb="3" Na="Zuschläge" />
+	<Category Nb="15" Na="Pension" Kd="0" />
+	<Sub_category Nbc="15" Nb="1" Na="Private Rente" />
+	<Sub_category Nbc="15" Nb="2" Na="Staatliche Rente" />
+	<Sub_category Nbc="15" Nb="3" Na="Versehrtenrente" />
+	<Category Nb="16" Na="Sonstige Ausgaben" Kd="1" />
+	<Sub_category Nbc="16" Nb="1" Na="Kirchenbeitrag" />
+	<Sub_category Nbc="16" Nb="2" Na="Sparbeträge" />
+	<Sub_category Nbc="16" Nb="3" Na="Spenden" />
+	<Sub_category Nbc="16" Nb="4" Na="Unterhalt" />
+	<Category Nb="17" Na="Sonstige Einnahmen" Kd="0" />
+	<Sub_category Nbc="17" Nb="1" Na="Abfertigung" />
+	<Sub_category Nbc="17" Nb="2" Na="Alimente" />
+	<Sub_category Nbc="17" Nb="3" Na="Arbeitslosengeld" />
+	<Sub_category Nbc="17" Nb="4" Na="Sozialhilfe" />
+	<Category Nb="18" Na="Urlaub" Kd="1" />
+	<Sub_category Nbc="18" Nb="1" Na="Bahnkarten" />
+	<Sub_category Nbc="18" Nb="2" Na="Flugtickets" />
+	<Sub_category Nbc="18" Nb="3" Na="Hotel" />
+	<Sub_category Nbc="18" Nb="4" Na="Reisebüro" />
+	<Sub_category Nbc="18" Nb="5" Na="Sehenswürdigkeiten" />
+	<Category Nb="19" Na="Versicherungen" Kd="1" />
+	<Sub_category Nbc="19" Nb="1" Na="Haftpflichtversicherung" />
+	<Sub_category Nbc="19" Nb="2" Na="Lebensversicherung" />
+	<Sub_category Nbc="19" Nb="3" Na="Rechtsschutzversicherung" />
+	<Category Nb="20" Na="Wohnung" Kd="1" />
+	<Sub_category Nbc="20" Nb="1" Na="Betriebskosten" />
+	<Sub_category Nbc="20" Nb="2" Na="Einrichtung" />
+	<Sub_category Nbc="20" Nb="3" Na="Haushaltsversicherung" />
+	<Sub_category Nbc="20" Nb="4" Na="Kabeltv" />
+	<Sub_category Nbc="20" Nb="5" Na="Miete" />
+	<Sub_category Nbc="20" Nb="6" Na="Rundfunkgebühr" />
+	<Sub_category Nbc="20" Nb="7" Na="Strom" />
+	<Sub_category Nbc="20" Nb="8" Na="Telefon" />
+	<Sub_category Nbc="20" Nb="9" Na="Wasser" />
+	<Bank Nb="1" Na="Dagobert Bank" Co="(null)" BIC="(null)" Adr="(null)" Tel="(null)" Mail="(null)" Web="(null)" Nac="(null)" Faxc="(null)" Telc="(null)" Mailc="(null)" Rem="(null)" />
+	<Bank Nb="2" Na="Zock Bank" Co="(null)" BIC="(null)" Adr="(null)" Tel="(null)" Mail="(null)" Web="(null)" Nac="(null)" Faxc="(null)" Telc="(null)" Mailc="(null)" Rem="(null)" />
+	<Bet Ddte="1" Bet_deb_cash_account_option="1"/>
+</Grisbi>
