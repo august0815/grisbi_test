@@ -23,3 +23,6 @@ you will need https://github.com/JumpLink/simple-xml-reader-vala compiled and in
 
 Some tests.
 
+Sometime you get an error in grisbi file (bug in grisbi ??) : Bank="-1" is saved in <Account>
+To solve this edit the account again in grisbi .
+
