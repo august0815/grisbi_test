@@ -10,6 +10,15 @@ list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 
 find_package(Vala "0.16" REQUIRED)
 
+if(VALA_VERSION STRGREATER "0.17.0")
+  list(REMOVE_ITEM required_pkgs "libvala-0.16" )
+  set(valashort_ver "0.18")
+  set(valac_cond)
+else()
+  list(REMOVE_ITEM required_pkgs "libvala-0.18" )
+  set(valashort_ver "0.16")
+  set(valac_cond "-D;VALA_LESS_0_18")
+endif()
 set(srcfiles "${PROJECT_SOURCE_DIR}/src/*.vala")
 include(ValaPkgs)
 vala_pkgs(VALA_C

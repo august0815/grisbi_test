@@ -14,7 +14,7 @@ download compile and install valama, then enter valama end enter in project sele
 	make
 	copy the *.gsb file to build (at moment only file in same dir is opend)
 	click on grisby.
-
+	Please copy the main.ui  to build
 	you could allso try to press compile button.
 
 test with simple xml reader

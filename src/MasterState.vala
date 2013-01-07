@@ -10,8 +10,7 @@ public class MasterState
 	public ArrayList<Bank>  bank = new ArrayList<Bank>();
 
   public MasterState()
-  {  print ("MasterState");
-	 addBank("0","BARGELD!");
+  {  addBank("0","BARGELD!");
      }
      
           ~MasterState() {
@@ -28,24 +27,14 @@ public class MasterState
 		bank.add(newbank); 
 		}
 	public void addBankKonto(string nr,string name, string konr,string balance,string typ){
-		print (" %s   %s " ,name,balance);
 		int nnr=int.parse(nr);
-		print ("NNR %d\n",nnr);
-		if (nnr<0) {print ("fehler");
+		if (nnr<0) {print ("Fehler in gespeicheter Grisbi Datei : Bank='-1'\nBitte die Zuordnung Konto=>Bank bearbeiten und speichern\nError in saved Grisbi file: Bank='-1'\nPlease edit  mapping Account=>Bank and save");
 					}
-		print ("NNR %d\n",nnr);
-		print ("Bank Nr_NAME %s ",bank[nnr].get_name()); 
 		bank[nnr].addKonto(name,balance,konr,typ);
 		} 
 	
-    public string display(){
-		string text="";
-		foreach (Bank b in bank ){
-			text +="Bank Name          :" +b.get_name()+"  Bank Nummer   :"+b.nummer.to_string()+"\n";
-			text +="------------------------------------------------------------------------\n";
-			text +=b.display();
-			}
-			return text;
-			}
+	public ArrayList<Bank> getBank(){
+	 	return bank;
+	}
 }
 

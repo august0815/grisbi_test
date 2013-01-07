@@ -32,10 +32,8 @@ public class Sxml.Example : DataReader, Object {
 				setbank();
 			}
 		}
-		//return master;
-	}
-	public void /*MasterState*/ parse1(MasterState master) {
-		this.master=master;
+		//Nochmal Durchsuchen vom Start
+		reset();
 		next();
 		while (current_token != MarkupTokenType.EOF) {
 			next();
@@ -43,9 +41,7 @@ public class Sxml.Example : DataReader, Object {
 				atr=reader.get_attributes ();
 				setmap();
 			}
-			
 		}
-		//return master;
 	}
 	
 	public void setmaster (){
@@ -94,15 +90,5 @@ public class Sxml.Example : DataReader, Object {
 		master.addBankKonto (banknr,name,konr, balance,typ);
 		}
 
-public string printt(){
-		string text="\n";
-		text += master.display();
-	
-	
-	
-		text +="\n\n";
-		
-		return text;	
-		}
 		
 }

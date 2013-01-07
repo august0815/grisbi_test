@@ -44,23 +44,18 @@ public class Bank
         set { _nummer = value; }
     }
     public int  addKonto(string nam,string bal,string konr,string typ){
-		print ("KONTONR %s \n",konr);
 		foreach(Konto k in konten){
-			print ("KONTONR %s \n",konr);
-			if (konr==k.kontonr){ print ("Ist schon vorhanden");return 0;}
-		}
-				print ("NEUES KONTO\n");	
-				var newkonto=new Konto(nam,bal,konr,typ);
-					konten.add(newkonto); 	
-			return 1;			
-	}
-	public string display(){
-		string text="";
-		foreach (Konto k in konten ){
-			text +="Konto Name          :" +k.get_name()+"  AnfangsKapital   :"+k.start.to_string()+"\n";
+			if (konr==k.kontonr){ 
+				/*print ("Ist schon vorhanden")*/
+			return 0;}
 			}
-		return text;}
-	
+			var newkonto=new Konto(nam,bal,konr,typ);
+			konten.add(newkonto); 	
+			return 0;			
+	}
+	public ArrayList<Konto> getKonto(){
+	 	return konten;
+	}
 
 }
 
