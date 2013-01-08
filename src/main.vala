@@ -51,16 +51,21 @@ public class GrisbiFileViewer : Window {
                                       Stock.CANCEL, ResponseType.CANCEL,
                                       Stock.OPEN, ResponseType.ACCEPT);
         if (file_chooser.run () == ResponseType.ACCEPT) {
-            open_file (file_chooser.get_filename ().split("/"));
+			open_file (file_chooser.get_filename ().split("/"));
         }
         file_chooser.destroy ();
     }
 
     
     private void open_file ( string[]? _raw_path = null ) {
+			string dir = "";
 			string filename = _raw_path[_raw_path.length-1];
+			for (int i=0;i<_raw_path.length-1;i++){
+				 dir      += "/"+_raw_path[i]; }
+				 dir +="/";
+			
             string text="File göffnet    " + filename+"\n";
-        	Example xml = new Example("./",filename);
+        	Example xml = new Example(dir,filename);
 			xml.parse(master);
 			text +="              " +master.file_name+"\n";
 			tree_display();
