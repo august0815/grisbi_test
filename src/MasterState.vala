@@ -7,7 +7,7 @@ public class MasterState
 {
 	private string _file_name;
 
-	public ArrayList<Bank>  bank = new ArrayList<Bank>();
+	private ArrayList<Bank>  bank = new ArrayList<Bank>();
 
   public MasterState()
   {  addBank("0","BARGELD!");
@@ -32,6 +32,11 @@ public class MasterState
 					}
 		bank[nnr].addKonto(name,balance,konr,typ);
 		} 
+	public void addBankKontoTransaktion(string ac_nr ,string nb,string datum,string betrag,string gegen,string pa){
+		foreach (Bank b in bank){
+			b.addKontoTransaktion(ac_nr ,nb,datum,betrag,gegen,pa);
+			}
+		}
 	
 	public ArrayList<Bank> getBank(){
 	 	return bank;

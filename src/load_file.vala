@@ -14,6 +14,12 @@ public class Sxml.Example : DataReader, Object {
 	public string banknr;
 	public string konr;
 	public string typ;
+	public string accountnr;
+ 	public string tran_nr;
+	public string datum;
+	public string amount;
+	public string trt;
+	public string pa;
 	public MasterState master;
 	public Example (string path, string filename) {
 		reader = new XmlStreamReader (path+filename);
@@ -40,6 +46,16 @@ public class Sxml.Example : DataReader, Object {
 				if(reader.name == "Account") {
 				atr=reader.get_attributes ();
 				setmap();
+			}
+		}
+		//Nochmal Durchsuchen vom Start
+		reset();
+		next();
+		while (current_token != MarkupTokenType.EOF) {
+			next();
+				if(reader.name == "Transaction") {
+				atr=reader.get_attributes ();
+				settrans();
 			}
 		}
 	}
@@ -88,6 +104,30 @@ public class Sxml.Example : DataReader, Object {
 			}
 		}
 		master.addBankKonto (banknr,name,konr, balance,typ);
+		}
+	
+		public void settrans (){
+		foreach (var key in atr.keys) {
+			if (key=="Ac") {
+				 accountnr=atr.get (key);
+			}
+			if (key=="Nb") {
+				 tran_nr=atr.get (key);
+			}
+			if (key=="Dt") {
+				 datum=atr.get (key);
+			}
+			if (key=="Am") {
+				 amount=atr.get (key);
+			}
+			if (key=="Trt") {
+				 trt=atr.get (key);
+			}
+			if (key=="Pa") {
+				 pa=atr.get (key);
+			}
+		}
+		master.addBankKontoTransaktion(accountnr,tran_nr,datum,amount,trt,pa);
 		}
 
 		

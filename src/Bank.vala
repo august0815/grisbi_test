@@ -7,12 +7,12 @@ using Gee;
 public class Bank
 {
 
- public ArrayList<Konto>  konten = new ArrayList<Konto>();
+  private ArrayList<Konto>  konten = new ArrayList<Konto>();
 
   /**
    * TODO: Add documentation here.
    */
-  private string name;
+  private string _name;
 
 
   /**
@@ -31,17 +31,14 @@ public class Bank
 		_nummer=int.parse(nummer);
 		}
 	
-	public string get_name() {
-		return name;
-		}
-	public void setname(string bk) {
-		name=bk;
-		}
-		
    /* Property */
     public int nummer {
         get { return _nummer; }
         set { _nummer = value; }
+    }
+    public string name {
+        get { return _name; }
+        set { _name = value; }
     }
     public int  addKonto(string nam,string bal,string konr,string typ){
 		foreach(Konto k in konten){
@@ -53,6 +50,13 @@ public class Bank
 			konten.add(newkonto); 	
 			return 0;			
 	}
+	public void addKontoTransaktion(string ac_nr ,string nb,string datum,string betrag,string gegen,string pa){
+			foreach (Konto k in konten){
+			if (ac_nr==k.kontonr){
+					k.addTransaktion(nb,datum,betrag,gegen,pa);
+					}
+				}
+			}
 	public ArrayList<Konto> getKonto(){
 	 	return konten;
 	}

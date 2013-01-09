@@ -4,10 +4,14 @@ using Sxml;
 public class GrisbiFileViewer : Window {
     private Gtk.Builder builder;
     private Gtk.VBox vbox;
-	public MasterState master;
+	private MasterState master;
     private  TreeView display;
     private  TreeStore store;
-    
+    private TextView text_display;
+    private TreeSelection selection_konto;
+   	private string konto_index="-1";
+
+
     public GrisbiFileViewer () {
      
         master = new MasterState();
@@ -19,7 +23,10 @@ public class GrisbiFileViewer : Window {
         this.add (vbox); 
         vbox.show ();
         display = this.builder.get_object ("treeview") as Gtk.TreeView;
-		setup_tree_display (display);
+        text_display = this.builder.get_object ("textview1") as Gtk.TextView;
+        this.selection_konto = display.get_selection();
+		this.selection_konto.changed.connect (get_row_konto);
+        setup_tree_display (display);
         this.menu ();
     }
 	 private bool load_from_file() {
@@ -46,6 +53,8 @@ public class GrisbiFileViewer : Window {
    }
 
     private void on_openfile_clicked () {
+		master=null;
+		master = new MasterState();
         var file_chooser = new FileChooserDialog ("Grisbi  FILE Select", this,
                                       FileChooserAction.OPEN,
                                       Stock.CANCEL, ResponseType.CANCEL,
@@ -69,10 +78,37 @@ public class GrisbiFileViewer : Window {
 			xml.parse(master);
 			text +="              " +master.file_name+"\n";
 			tree_display();
-			master=null;
-			master = new MasterState();
-    }
-
+			}
+	private void get_row_konto () {
+	TreeModel model;
+	TreeIter iter;
+    string text="";
+	if( this.selection_konto.get_selected (out model, out iter) ) {
+	model.get (iter, 0, out konto_index);
+		}
+			var bank= master.getBank();
+			foreach (Bank b in bank){
+				var konto=b.getKonto();
+				foreach (Konto k in konto){
+				if (konto_index==k.name){
+					text +="   " +b.name;
+					text +="    "+k.name+"\n";
+					var transaktion=k.getTransaktionen();
+					foreach (Transaktion t in transaktion){
+							text +=t.datum+"  "+t.betrag+"\n";
+							}
+						}
+					
+					else { 
+						text +="Bitte Konto auswählen";
+						}
+					}
+				}
+				this.text_display.buffer.text =text+"\n";
+				text="";
+				konto_index="-1"; 
+	}
+	
 
 	private void setup_tree_display (TreeView view){
 		store = new TreeStore (2, typeof (string), typeof (string));
@@ -96,9 +132,9 @@ public class GrisbiFileViewer : Window {
 			store.append (out category_iter, root);
 			var konto=b.getKonto();
 			foreach (Konto k in konto){
-			store.set (category_iter, 0, b.get_name(), -1);
+			store.set (category_iter, 0, b.name, -1);
 			store.append (out product_iter, category_iter);
-			store.set (product_iter, 0, k.get_name(), 1, k.start.to_string(), -1);
+			store.set (product_iter, 0, k.name, 1, k.start.to_string(), -1);
 					}
 				}
          	}
