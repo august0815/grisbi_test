@@ -8,7 +8,11 @@ public class MasterState
 	private string _file_name;
 
 	private ArrayList<Bank>  bank = new ArrayList<Bank>();
-
+	private ArrayList<Kategorie>  kategorie = new ArrayList<Kategorie>();
+	private ArrayList<Planer>  planer = new ArrayList<Planer>();
+	private ArrayList<Party>  party = new ArrayList<Party>();
+	
+	
   public MasterState()
   {  addBank("0","BARGELD!");
      }
@@ -37,6 +41,12 @@ public class MasterState
 			b.addKontoTransaktion(ac_nr ,nb,datum,betrag,gegen,pa);
 			}
 		}
+	public void addParty(string nummer,string name,string note,string search){
+		var newparty = new Party(nummer,name,note,search);
+		party.add(newparty);
+		}
+	
+	
 	
 	public ArrayList<Bank> getBank(){
 	 	return bank;

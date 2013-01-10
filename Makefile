@@ -23,7 +23,10 @@ FILES = \
 	  src/Bank.vala \
 	  src/Konto.vala \
 	  src/Transaktion.vala \
-	 
+	  src/Kategorie.vala \
+	  src/Subkategorie.vala \
+	  src/vParty.vala \
+	  src/Planer.vala \
     
 
 

@@ -56,7 +56,7 @@ public class Konto
 			transaktion.add(newtrans); 	
 			return 0;			
 	}
-		public ArrayList<Transaktion> getTransaktionen(){
+	public ArrayList<Transaktion> getTransaktionen(){
 	 	return transaktion;
 	}
 

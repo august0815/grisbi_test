@@ -37,6 +37,10 @@ public class Sxml.Example : DataReader, Object {
 				atr=reader.get_attributes ();
 				setbank();
 			}
+			if(reader.name == "Party") {
+				atr=reader.get_attributes ();
+				setparty();
+			}
 		}
 		//Nochmal Durchsuchen vom Start
 		reset();
@@ -104,6 +108,27 @@ public class Sxml.Example : DataReader, Object {
 			}
 		}
 		master.addBankKonto (banknr,name,konr, balance,typ);
+		}
+		public void setparty (){
+		string Nb="";
+		string Na="";
+		string Txt="";
+		string search="";
+		foreach (var key in atr.keys) {
+			if (key=="Nb") {
+				 Nb=atr.get (key);
+			}
+			if (key=="Na") {
+				 Na=atr.get (key);
+			}
+			if (key=="Txt") {
+				 Txt=atr.get (key);
+			}
+			if (key=="Search") {
+				 search=atr.get (key);
+			}
+		}
+		master.addParty (Nb,Na,Txt,search);
 		}
 	
 		public void settrans (){
