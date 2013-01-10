@@ -12,13 +12,13 @@ public class Bank
   /**
    * TODO: Add documentation here.
    */
-  private string _name;
+  public string name {get;set;}
 
 
   /**
    * TODO: Add documentation here.
    */
-  private int _nummer;
+  public int nummer {get;set;}
 
 
   /**
@@ -30,16 +30,6 @@ public class Bank
 		this.name=name;
 		_nummer=int.parse(nummer);
 		}
-	
-   /* Property */
-    public int nummer {
-        get { return _nummer; }
-        set { _nummer = value; }
-    }
-    public string name {
-        get { return _name; }
-        set { _name = value; }
-    }
     public int  addKonto(string nam,string bal,string konr,string typ){
 		foreach(Konto k in konten){
 			if (konr==k.kontonr){ 

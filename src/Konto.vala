@@ -12,43 +12,31 @@ public class Konto
   /**
    * TODO: Add documentation here.
    */
-  private string type;
+  public string typ {get;set;}
 
-  private string _kontonr;
+  public string kontonr {get;set;}
   /**
    * TODO: Add documentation here.
    */
-  private int _start;
+  public int start {get;set;}
   /**
    * TODO: Add documentation here.
    */
-  private string _name;
+  public string name {get;set;}
 
   /**
    * TODO: Add documentation here.
    */
   public Konto(string name,string start,string konr,string typ){
 		this.name=name;
-		_start=int.parse(start);
-		kontonr=konr;
-		type=typ;
+		this.start=int.parse(start);
+		this.kontonr=konr;
+		this.typ=typ;
 		}
-	/* Property */
-    public int start {
-        get { return _start; }
-        set { _start = value; }
-    } 
-    public string kontonr {
-        get { return _kontonr; }
-        set { _kontonr = value; }
-    }
-    public string name {
-        get { return _name; }
-        set { _name = value; }
-    }
+		
 	public int  addTransaktion(string nb,string datum,string betrag,string gegen,string pa){
 		foreach(Transaktion t in transaktion){
-			if (nb==t.trans_nr){ 
+			if (nb==t.nummer){ 
 				/*print ("Ist schon vorhanden")*/
 			return 0;}
 			}

@@ -13,4 +13,10 @@
 		<package>gee-1.0</package>
 		<package>Sxml-0.1</package>
 	</packages>
+	<source-directories/>
+	<source-files/>
+	<file-types/>
+	<buildsystem-directories/>
+	<buildsystem-files/>
+	<buildsystem-file-types/>
 </project>

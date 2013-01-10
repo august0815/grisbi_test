@@ -5,8 +5,8 @@ using Gee;
 
 public class MasterState
 {
-	private string _file_name;
-
+	public  string file_name {get;set;}
+	
 	private ArrayList<Bank>  bank = new ArrayList<Bank>();
 	private ArrayList<Kategorie>  kategorie = new ArrayList<Kategorie>();
 	private ArrayList<Planer>  planer = new ArrayList<Planer>();
@@ -20,13 +20,7 @@ public class MasterState
           ~MasterState() {
      }
      
-     /* Property */
-    public string file_name {
-        get { return _file_name; }
-        set { _file_name = value; }
-	}
-	
-	public void addBank(string num,string nam){
+    public void addBank(string num,string nam){
 		var newbank=new Bank(nam,num);
 		bank.add(newbank); 
 		}
