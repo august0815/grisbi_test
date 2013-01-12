@@ -5,10 +5,12 @@ using GLib;
  */
 public class Party
 {
-	private string _nummer;
-	private string _name;
-    private string _note;
-    private string _search;
+	public string nummer {get;set;}
+	public string name {get;set;}
+    public string note {get;set;}
+    public string search {get;set;}
+    
+    public int betrag  {get;set;}
 
 	public Party (string nummer,string name,string note,string search){
 		this.nummer=nummer;
@@ -18,22 +20,6 @@ public class Party
 		
 	}
 	
-	public string nummer {
-        get { return _nummer; }
-        set { _nummer = value; }
-        }
-	 public string name {
-        get { return _name; }
-        set { _name = value; }
-        }
-	 public string note {
-        get { return _note; }
-        set { _note = value; }
-        }
-	 public string search {
-        get { return _search; }
-        set { _search = value; }
-        }
 
 }
 

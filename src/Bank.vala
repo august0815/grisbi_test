@@ -40,10 +40,10 @@ public class Bank
 			konten.add(newkonto); 	
 			return 0;			
 	}
-	public void addKontoTransaktion(string ac_nr ,string nb,string datum,string betrag,string gegen,string pa){
+	public void addKontoTransaktion(string ac_nr ,string nb,string datum,string betrag,string gegen,string pa,string Ca,string Sca){
 			foreach (Konto k in konten){
 			if (ac_nr==k.kontonr){
-					k.addTransaktion(nb,datum,betrag,gegen,pa);
+					k.addTransaktion(nb,datum,betrag,gegen,pa,Ca,Sca);
 					}
 				}
 			}

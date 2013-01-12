@@ -77,12 +77,45 @@ public class GrisbiFileViewer : Window {
         	Example xml = new Example(dir,filename);
 			xml.parse(master);
 			text +="              " +master.file_name+"\n";
+			rechne();
 			tree_display();
 			}
+	private void rechne(){
+		var party= master.getParty();
+		var bank=master.getBank();
+		var cat= master.getKategorie();
+		foreach (Bank b in bank){
+			var konto=b.getKonto();
+				foreach (Konto k in konto){
+				   var transaktion=k.getTransaktionen();
+					 foreach (Transaktion t in transaktion){
+						  int betrag=int.parse(t.betrag);
+						  string pa=t.pa;
+						  foreach(Party p in party){
+						  if (pa==p.nummer){
+						  p.betrag += betrag;
+								}
+						  foreach (Kategorie c in cat){
+							  var sub=c.getSub();
+							if (t.kategorie==c.nummer){
+								foreach(Subkategorie s in sub){
+									if(t.subkategorie==s.nummer){
+										s.betrag += betrag;
+										}
+									}
+								}
+							}		
+						}
+					}
+				}
+		}
+
+	
 	private void get_row_konto () {
 	TreeModel model;
 	TreeIter iter;
     string text="";
+    string text1="";
 	if( this.selection_konto.get_selected (out model, out iter) ) {
 	model.get (iter, 0, out konto_index);
 		}
@@ -95,18 +128,44 @@ public class GrisbiFileViewer : Window {
 					text +="    "+k.name+"\n";
 					var transaktion=k.getTransaktionen();
 					foreach (Transaktion t in transaktion){
-							text +=t.datum+"  "+t.betrag+"\n";
+							text1 +=t.datum+"  "+t.betrag+"\n";
 							}
 						}
 					
 					else { 
-						text +="Bitte Konto auswählen";
+						text1 +="Bitte Konto auswählen";
 						}
 					}
 				}
-				this.text_display.buffer.text =text+"\n";
-				text="";
-				konto_index="-1"; 
+				var cat= master.getKategorie();
+			    for (int i=0;i< cat.size;i++){
+				  if (cat[i].name!=""){
+					if (konto_index==cat[i].name){
+					text1="";
+					text +="   " +cat[i].name+"\n";
+					var sub=cat[i].getSub();
+				 
+						for (int ii=0;ii< sub.size;ii++){
+						text1 +=sub[ii].name+"  "+sub[ii].betrag.to_string()+"\n";
+						}
+					}
+					}
+				}
+
+			var party= master.getParty();
+				for (int i=0;i< party.size;i++){
+				  if (party[i].name!=""){
+					if (konto_index==party[i].name){
+					text1="";
+						text1 +=party[i].name+"  "+party[i].betrag.to_string()+"\n";
+						}
+					}
+					}
+
+			
+			this.text_display.buffer.text =text+text1+"\n";
+			text="";
+			konto_index="-1"; 
 	}
 	
 
@@ -137,6 +196,36 @@ public class GrisbiFileViewer : Window {
 			store.set (product_iter, 0, k.name, 1, k.start.to_string(), -1);
 					}
 				}
+		store.append (out  root ,null);
+		store.set (root, 0, "Empfänger", -1);
+		store.append (out category_iter, root);
+		store.set (category_iter, 0, "Empfänger", -1);
+		var party= master.getParty();
+			   for (int i=0;i< party.size;i++){
+				  if (party[i].name!=""){
+				
+	  			store.append (out product_iter, category_iter);
+				store.set (product_iter, 0, party[i].name, 1, party[i].betrag.to_string(), -1);
+							}
+					}
+		store.append (out  root ,null);
+		store.set (root, 0, "Kategorie", -1);
+		store.append (out category_iter, root);
+		store.set (category_iter, 0, "UnterKategorie", -1);
+		var cat= master.getKategorie();
+			   for (int i=0;i< cat.size;i++){
+				  if (cat[i].name!=""){
+				 var sub=cat[i].getSub();
+				store.append (out category_iter, root);
+				store.set (category_iter, 0,cat[i].name , -1);
+			for (int ii=0;ii< sub.size;ii++){
+			
+			store.set (category_iter, 0, cat[i].name, -1);
+			store.append (out product_iter, category_iter);
+			store.set (product_iter, 0, sub[ii].name, 1, sub[ii].betrag.to_string(), -1);
+					}
+							}
+					}
          	}
          	
     public static int main (string[] args) {

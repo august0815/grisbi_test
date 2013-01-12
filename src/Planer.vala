@@ -11,7 +11,7 @@ public class Planer
  	public string betrag {get;set;}
 	public string kategorie {get;set;}
 	public string party {get;set;}
-	public string _subkategorie;
+	public string subkategorie {get;set;}
 	public string _transfer_konto;
 	public string _pn;
 	public string cpn;
@@ -26,11 +26,13 @@ public class Planer
     public string _breakdown;
 	public string _mother_tr;
 	
-	public Planer (string nummer,string datum,string betrag,string party){
+	public Planer (string nummer,string datum,string betrag,string party,string kategorie,string subkategorie){
 		this.nummer=nummer;
 		this.datum=datum;
 		this.betrag=betrag;
 		this.party=party;
+		this.kategorie=kategorie;
+		this.subkategorie=subkategorie;
 		}
 
 }

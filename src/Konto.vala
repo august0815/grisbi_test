@@ -34,13 +34,13 @@ public class Konto
 		this.typ=typ;
 		}
 		
-	public int  addTransaktion(string nb,string datum,string betrag,string gegen,string pa){
+	public int  addTransaktion(string nb,string datum,string betrag,string gegen,string pa,string Ca,string Sca){
 		foreach(Transaktion t in transaktion){
 			if (nb==t.nummer){ 
 				/*print ("Ist schon vorhanden")*/
 			return 0;}
 			}
-			var newtrans=new Transaktion(nb,datum,betrag,gegen,pa);
+			var newtrans=new Transaktion(nb,datum,betrag,gegen,pa,Ca,Sca);
 			transaktion.add(newtrans); 	
 			return 0;			
 	}

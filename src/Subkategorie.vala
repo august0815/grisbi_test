@@ -9,6 +9,8 @@ public class Subkategorie
 	public string name {get;set;}
 	public string nbc {get;set;}
 	
+	public int betrag  {get;set;}
+	
 	public Subkategorie(string nummer,string name ,string nbc){
 		this.nummer=nummer;
 		this.name=name;

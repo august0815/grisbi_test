@@ -41,15 +41,28 @@ public class Sxml.Example : DataReader, Object {
 				atr=reader.get_attributes ();
 				setparty();
 			}
+			if(reader.name == "Category") {
+				atr=reader.get_attributes ();
+				setcategory();
+			}
+			if(reader.name == "Scheduled") {
+				atr=reader.get_attributes ();
+				setplaner();
+			}
+			
 		}
 		//Nochmal Durchsuchen vom Start
 		reset();
 		next();
 		while (current_token != MarkupTokenType.EOF) {
 			next();
-				if(reader.name == "Account") {
+			if(reader.name == "Account") {
 				atr=reader.get_attributes ();
 				setmap();
+			}
+			if(reader.name == "Sub_category") {
+				atr=reader.get_attributes ();
+				setsubcat();
 			}
 		}
 		//Nochmal Durchsuchen vom Start
@@ -82,9 +95,8 @@ public class Sxml.Example : DataReader, Object {
 			nam=(atr.get (key));
 			}
 		}
-		if (nam!=""){
+		if (nam!="")
 		master.addBank(num,nam);
-		}
 		}
 
 	
@@ -107,6 +119,7 @@ public class Sxml.Example : DataReader, Object {
 				 typ=atr.get (key);
 			}
 		}
+		if (banknr!="")
 		master.addBankKonto (banknr,name,konr, balance,typ);
 		}
 		public void setparty (){
@@ -128,10 +141,80 @@ public class Sxml.Example : DataReader, Object {
 				 search=atr.get (key);
 			}
 		}
+		if (Nb!="")
 		master.addParty (Nb,Na,Txt,search);
 		}
-	
+		public void setplaner (){
+		string Nb="";
+		string Dt="";
+		string Am="";
+		string Pa="";
+		string Ca="";
+		string Sca="";
+		foreach (var key in atr.keys) {
+			if (key=="Nb") {
+				 Nb=atr.get (key);
+			}
+			if (key=="Dt") {
+				 Dt=atr.get (key);
+			}
+			if (key=="Am") {
+				 Am=atr.get (key);
+			}
+			if (key=="Pa") {
+				 Pa=atr.get (key);
+			}
+			if (key=="Ca") {
+				 Ca=atr.get (key);
+			}
+			if (key=="Sca") {
+				 Sca=atr.get (key);
+			}
+		}
+		if (Nb!="")
+		master.addPlaner (Nb,Dt,Am,Pa,Ca,Sca);
+		}
+		public void setcategory(){
+		string Nb="";
+		string Na="";
+		string Typ="";
+		foreach (var key in atr.keys) {
+			if (key=="Nb") {
+				 Nb=atr.get (key);
+			}
+			if (key=="Na") {
+				 Na=atr.get (key);
+			}
+			if (key=="Kd") {
+				 Typ=atr.get (key);
+			}
+		}
+		if (Nb!="")
+		master.addKategorie (Nb,Na,Typ);
+		}
+		
+		public void setsubcat(){
+		string Nb="";
+		string Na="";
+		string Nbc="";
+		foreach (var key in atr.keys) {
+			if (key=="Nbc") {
+				 Nbc=atr.get (key);
+			}
+			if (key=="Nb") {
+				 Nb=atr.get (key);
+			}
+			if (key=="Na") {
+				 Na=atr.get (key);
+			}
+		}
+		if (Nb!="")
+		master.addSubKategorie (Nbc,Nb,Na);
+		}
+		
 		public void settrans (){
+		string Ca="";
+		string Sca="";
 		foreach (var key in atr.keys) {
 			if (key=="Ac") {
 				 accountnr=atr.get (key);
@@ -151,8 +234,15 @@ public class Sxml.Example : DataReader, Object {
 			if (key=="Pa") {
 				 pa=atr.get (key);
 			}
+			if (key=="Ca") {
+				 Ca=atr.get (key);
+			}
+			if (key=="Sca") {
+				 Sca=atr.get (key);
+			}
 		}
-		master.addBankKontoTransaktion(accountnr,tran_nr,datum,amount,trt,pa);
+		if (accountnr!="")
+		master.addBankKontoTransaktion(accountnr,tran_nr,datum,amount,trt,pa,Ca,Sca);
 		}
 
 		

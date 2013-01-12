@@ -30,20 +30,43 @@ public class MasterState
 					}
 		bank[nnr].addKonto(name,balance,konr,typ);
 		} 
-	public void addBankKontoTransaktion(string ac_nr ,string nb,string datum,string betrag,string gegen,string pa){
+	public void addBankKontoTransaktion(string ac_nr ,string nb,string datum,string betrag,string gegen,string pa,string Ca,string Sca){
 		foreach (Bank b in bank){
-			b.addKontoTransaktion(ac_nr ,nb,datum,betrag,gegen,pa);
+			b.addKontoTransaktion(ac_nr ,nb,datum,betrag,gegen,pa,Ca,Sca);
 			}
 		}
+	public void addKategorie (string Nb,string Na,string Typ){
+		var newcat = new Kategorie(Nb,Na,Typ);
+		kategorie.add(newcat);
+	   }
+	public void addSubKategorie(string Nbc ,string Nb,string Na){
+		foreach (Kategorie k in kategorie){
+			if (k.nummer==Nbc)
+			k.addSub (Nbc,Nb,Na);
+			}
+		}	
 	public void addParty(string nummer,string name,string note,string search){
 		var newparty = new Party(nummer,name,note,search);
 		party.add(newparty);
 		}
-	
+	public void addPlaner(string nummer,string datum,string betrag,string party,string kategorie,string subkategorie){
+		var newplaner = new Planer(nummer,datum,betrag,party,kategorie,subkategorie);
+		planer.add(newplaner);
+		}
 	
 	
 	public ArrayList<Bank> getBank(){
 	 	return bank;
+	}
+	
+	public ArrayList<Party> getParty(){
+	 	return party;
+	}
+	public ArrayList<Kategorie> getKategorie(){
+	 	return kategorie;
+	}
+	public ArrayList<Planer> getPlaner(){
+	 	return planer;
 	}
 }
 
