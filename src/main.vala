@@ -1,17 +1,28 @@
 using GLib;
 using Gtk;
 using Sxml;
+using Cairo;
 public class GrisbiFileViewer : Window {
     private Gtk.Builder builder;
     private Gtk.VBox vbox;
-	private MasterState master;
+	private Gtk.Calendar calendar;
+	private Gtk.Label label;
+	private Gtk.DrawingArea drawing_area;
+	
     private  TreeView display;
     private  TreeStore store;
-    private TextView text_display;
+    private  TextView text_display;
+    
     private TreeSelection selection_konto;
+        
    	private string konto_index="-1";
 
-
+	private MasterState master;
+	
+	private int tt;
+	private int mm;
+	private int jj;
+private const int SIZE = 50;
     public GrisbiFileViewer () {
      
         master = new MasterState();
@@ -24,9 +35,28 @@ public class GrisbiFileViewer : Window {
         vbox.show ();
         display = this.builder.get_object ("treeview") as Gtk.TreeView;
         text_display = this.builder.get_object ("textview1") as Gtk.TextView;
+        calendar = this.builder.get_object ("calendar") as Gtk.Calendar;
+        label = this.builder.get_object ("datum_label") as Gtk.Label;
+        drawing_area =  this.builder.get_object ("drawingarea") as Gtk.DrawingArea;
+        drawing_area.draw.connect (on_draw);
+        
+       // Place a visual marker on a particular day:
+        this.calendar.mark_day (1);
         this.selection_konto = display.get_selection();
 		this.selection_konto.changed.connect (get_row_konto);
         setup_tree_display (display);
+        // Connect signals:
+
+		this.calendar.day_selected_double_click.connect (() => {
+			
+			this.jj=calendar.year;
+			this.mm=calendar.month+1;
+			//print("%s: %04d-%02d-%02d   ---- %02d\n", "DATUM", calendar.year, calendar.month, calendar.day, mm);
+			this.tt=calendar.day;
+			this.label.set_text("Neues Datum :"+mm.to_string()+"/"+tt.to_string()+"/"+jj.to_string());
+			//set_markup("%s %d %s %d %s %d".printf("Datum=",mm,"/",tt,"/",jj));
+			});
+
         this.menu ();
     }
 	 private bool load_from_file() {
@@ -43,13 +73,14 @@ public class GrisbiFileViewer : Window {
 		
         Gtk.ImageMenuItem menu_about =  this.builder.get_object ("about") as Gtk.ImageMenuItem;
         menu_about.activate.connect (() => {
-     
+		
         });
          var toolbutton_open = this.builder.get_object ("open") as Gtk.ToolButton;
          toolbutton_open.clicked.connect (() => {
 		 on_openfile_clicked();
 
 	   });
+	   
    }
 
     private void on_openfile_clicked () {
@@ -79,6 +110,7 @@ public class GrisbiFileViewer : Window {
 			text +="              " +master.file_name+"\n";
 			rechne();
 			tree_display();
+			//on_draw();
 			}
 	private void rechne(){
 		var party= master.getParty();
@@ -108,6 +140,7 @@ public class GrisbiFileViewer : Window {
 						}
 					}
 				}
+			}
 		}
 
 	
@@ -166,6 +199,7 @@ public class GrisbiFileViewer : Window {
 			this.text_display.buffer.text =text+text1+"\n";
 			text="";
 			konto_index="-1"; 
+			
 	}
 	
 
@@ -227,7 +261,42 @@ public class GrisbiFileViewer : Window {
 							}
 					}
          	}
-         	
+     private bool on_draw (Widget da, Context ctx) {
+        ctx.set_source_rgb (0, 0, 0);
+        ctx.set_line_width (2);
+        ctx.set_tolerance (0.1);
+        ctx.set_line_join (LineJoin.ROUND);
+        ctx.set_dash (new double[] {SIZE / 2.0, SIZE / 4.0}, 0);
+        stroke_shapes (ctx, 0, 0);
+        return true;
+      } 
+          private void stroke_shapes (Context ctx, int x, int y) {
+        this.draw_shapes (ctx, x, y, ctx.stroke);
+    }
+    private delegate void DrawMethod ();
+
+    private void draw_shapes (Context ctx, int x, int y, DrawMethod draw_method) {
+        ctx.save ();
+
+        ctx.new_path ();
+        ctx.translate (x + SIZE, y + SIZE);
+        bowtie (ctx);
+        draw_method ();
+
+       
+        ctx.restore();
+    }
+        private void bowtie (Context ctx) {
+        ctx.move_to (0, 0);
+        ctx.rel_line_to (2 * SIZE, 3 * SIZE);
+        ctx.rel_line_to (-3 * SIZE, 0);
+        ctx.rel_line_to (2 * SIZE, -3 * SIZE);
+        ctx.close_path ();
+    }     
+	private void print_date (string context) {
+		print ("%s: %04d-%02d-%02d\n", context, calendar.year, calendar.month, calendar.day);
+	}
+
     public static int main (string[] args) {
 		
         Gtk.init (ref args);
