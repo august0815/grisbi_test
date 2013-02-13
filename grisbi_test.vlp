@@ -1,5 +1,6 @@
-<project>
+<project version="0.1">
 	<name>grisbi_test</name>
+	<buildsystem>cmake</buildsystem>
 	<version>
 		<major>0</major>
 		<minor>0</minor>
@@ -13,10 +14,16 @@
 		<package>gobject-2.0</package>
 		<package>gtk+-3.0</package>
 	</packages>
-	<source-directories/>
+	<source-directories>
+		<directory>src</directory>
+		<directory>vapi</directory>
+	</source-directories>
 	<source-files/>
-	<file-types/>
-	<buildsystem-directories/>
-	<buildsystem-files/>
-	<buildsystem-file-types/>
+	<buildsystem-directories>
+		<directory>cmake</directory>
+	</buildsystem-directories>
+	<buildsystem-files>
+		<file>CMakeLists.txt</file>
+		<file>po/CMakeLists.txt</file>
+	</buildsystem-files>
 </project>
